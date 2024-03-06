@@ -8,7 +8,7 @@ const HomePage = () => {
   const payTimes = ["Fajr", "Dhuhr", "Asr", "Maghrib", "Isha"];
 
   useEffect(() => {
-    fetch(`https://api.aladhan.com/v1/timingsByAddress?address=${term}`)
+    fetch(`http://api.aladhan.com/v1/timingsByAddress?address=${term}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.code === 200) {
